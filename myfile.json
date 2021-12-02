@@ -1,0 +1,26 @@
+[
+  {
+    "username": "Richard",
+    "email": "asdasds@asdad.com",
+    "alternativ": "Vinprovning",
+    "bookingcomment": "Hej, bord för 2"
+  },
+  {
+    "username": "Richard",
+    "email": "asdasdas@asdsad.com",
+    "alternativ": "Julbord",
+    "bookingcomment": "Julbord - 5 personer"
+  },
+  {
+    "username": "Richard",
+    "email": "adasdasd@asdas.com",
+    "alternativ": "Julbord",
+    "bookingcomment": "Julbord - 25 personer"
+  },
+  {
+    "username": "Richard",
+    "email": "Joadsasdsa@asdas.com",
+    "alternativ": "Egen tillställning",
+    "bookingcomment": "Födelsedag"
+  }
+]

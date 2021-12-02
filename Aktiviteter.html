@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Great Northern Restaurant - Aktiviteter</title>
+    <link rel="stylesheet" href="restaurantcss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet" />
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <h1 id="logoh1">Great Northern Restaurant</h1>
+        <div id="centerList">
+            <ul id="horizontal-list">
+                <li><a href="index.html">Lunch</a></li>
+                <li><a href="menu.html">Meny</a></li>
+                <li><a href="Aktiviteter.html">Aktiviteter</a></li>
+                <li><a href="calendar.html">Kalender</a></li>
+                <li><a href="omoss.html">Om Oss</a></li>
+            </ul>
+            <div class="languageImg">
+                <a href="Aktiviteter.html"><img src="imgrest/seswedenflag_111684.png" alt="Swedish" /></a>
+                <a href="AktiviteterENG.html"><img src="imgrest/gbunitedkingdomflag_111699.png" alt="English" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div id="activitiesGrid">
+            <!--RUBRIK-->
+            <div class="activitiesItemHead">
+                <h2>— AKTIVITETER —</h2>
+            </div>
+
+            <!--VINPROVNING -->
+            <div class="activitiesItem1">
+                <h3>VINPROVNING</h3>
+                <p>
+                    Välkomna på vinprovning på Great Northern Restaurant! Du får
+                    möjlighet att prova kvalitetsviner från hela världen till en rimlig
+                    kostnad. Om du är van vid vinprovningar eller om du är nybörjare
+                    spelar mindre roll. För vinprovning handlar egentligen bara om att
+                    smaka och uppleva. Vi har flera olika teman du kan välja mellan,
+                    eller så skapar vi en unik provning för ditt sällskap. Välkomna att
+                    prova!
+                </p>
+            </div>
+            <div class="activitiesItem2">
+                <img src="imgrest/vin.jpg" alt="Vin" />
+            </div>
+
+            <!--YOGADAG-->
+            <div class="activitiesItem3">
+                <h3>YOGADAG</h3>
+                <p>
+                    Ladda batterierna med en heldag för kropp & själ - en dag fylld av
+                    yoga/spa och god mat! Tillsammans i en mindre grupp på har vi en
+                    inspirerande dag fylld med varierande yogapass, god mat och spa.
+                    Yogan är lugn och avslappnande med fokus på rörlighet, stretch och
+                    andning. Du använder din kropp som ett redskap att skapa energi och
+                    slappna av i musklerna och återhämtning. Vi kommer även prova på ett
+                    pass med yogatunes bollar så du får bättre cirkulation och energi.
+                </p>
+            </div>
+
+            <div class="activitiesItem4">
+                <img src="imgrest/yoga.jpg" alt="Yoga" />
+            </div>
+            <!--JULBORD-->
+            <div class="activitiesItem5">
+                <h3>JULBORD</h3>
+                <p>
+                    Här serveras ett traditionellt julbord fyllt med hemlagade
+                    delikatesser tillsammans med ett generöst dryckesutbud i denna
+                    förtrollande vintermiljö. Här får ni smaka på traditionella rätter
+                    och även vegetariska och veganska alternativ.
+                </p>
+            </div>
+            <div class="activitiesItem6">
+                <img src="imgrest/Julbord2.jpg" alt="Julbord" />
+            </div>
+            <!--FEST-->
+            <div class="activitiesItem7">
+                <h3>FEST ELLER BRÖLLOP</h3>
+                <p>
+                    Vi står till tjänst med råd och hjälp, för att just din
+                    tillställning ska bli som du önskar! Att anordna en fest är både
+                    roligt och utmanande. Hur mycket mat går åt, hur många bjud i glasen
+                    bör jag ha och ska vi ha buffé eller bordsservering? Vi på Great
+                    Northen restaurant är experter på att arrangera allt från mindre
+                    tillställningar till större. Hör av dig till oss för pris, bokning
+                    och bollplank inför din fest.
+                </p>
+            </div>
+            <div class="activitiesItem8">
+                <img src="imgrest/fest.jpg" alt="Fest" />
+            </div>
+
+            <!--FORMULÄR-->
+            <div class="activitiesItem9">
+                <h3>BOKNINGSFÖRFRÅGAN</h3>
+                <div class="activitiesform">
+                    <form onsubmit="activitesSubmit(event)">
+                        <label for="username">Namn:</label><br />
+                        <input type="text" id="username" name="username" /> <br />
+
+                        <label for="email">E-post:</label><br />
+                        <input type="text" id="email" name="email" /> <br />
+
+                        <label for="alternativ">Vad gäller bokningen:</label> <br />
+                        <select id="alternativ" name="alternativ">
+                            <option value="Vinprovning">Vinprovning</option>
+                            <option value="Yogadag">Yogadag</option>
+                            <option value="Julbord">Julbord</option>
+                            <option value="Egen tillställning">Egen tillställning</option>
+                        </select>
+                        <br />
+
+                        <label id="text">Bokningsförfrågan:</label> <br />
+                        <textarea placeholder="Tillexempel önskat datum och antal besökare" rows="4"
+                            cols="30" id="bookingcomment" name="bookingcomment"></textarea>
+                        <br />
+
+                        <input type="submit" value="Skicka" />
+                    </form>
+                    <div id="errorMessage"></div>
+                    <p>Vi återkommer till er via mejl med en bekräftelse.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li><a href="omoss.html">Kontakta Oss</a></li>
+            <li><a href="Aktiviteter.html">Boka Aktiviteter</a></li>
+        </ul>
+        <p class="smallFont center">&copy;2021 Great Northern Restaurant</p>
+    </div>
+</body>
+
+</html>

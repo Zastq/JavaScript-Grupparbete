@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!--Svenska bokstäver, css, iconer, skalan till mobil etc.. och namnet på fliken-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Great Northern Restaurant - Om Oss</title>
+    <link rel="stylesheet" href="restaurantcss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!--meny-->
+    <div class="topnav">
+        <h1 id="logoh1">Great Northern Restaurant</h1>
+        <div id="centerList">
+            <ul id="horizontal-list">
+                <li><a href="index.html">Lunch</a></li>
+                <li><a href="menu.html">Meny</a></li>
+                <li><a href="Aktiviteter.html">Aktiviteter</a></li>
+                <li><a href="calendar.html">Kalender</a></li>
+                <li><a href="omoss.html">Om Oss</a></li>
+            </ul>
+            <div class="languageImg">
+                <a href="omoss.html"><img src="imgrest/seswedenflag_111684.png" alt="Swedish" /></a>
+                <a href="omossENG.html"><img src="imgrest/gbunitedkingdomflag_111699.png" alt="English" /></a>
+            </div>
+        </div>
+    </div>
+
+    <!--Kontakta oss-->
+    <div class="content">
+        <div id="aboutUsGrid">
+            <div class="title">
+                <h2>— KONTAKT FORMULÄR —</h2>
+            </div>
+            <div class="left-content">
+                <h3>Kontakta oss</h3>
+                <h4>Telefonummer: 073-856 42 49</h4>
+                <h4>Adress: Storvägen 78 , 956 98 Lansjärv</h4>
+                <div id="socialImg">
+                    <a href="https://www.facebook.com"><img src="imgrest/facebook.png" alt="facebook" /></a>
+                    <a href="https://www.instagram.com"><img src="imgrest/instagram.png" alt="instagram" /></a>
+                </div>
+                <img src="imgrest/pexels-josh-hild-3229916.jpg" alt="Location_imgage" />
+            </div>
+            <script>
+                function writealert() {
+                    let text =
+                        "Medelande skickad" + document.getElementById("fname").value;
+                    alert(text);
+                }
+            </script>
+
+            <!--Kontakta oss formulär-->
+            <div class="middle-content">
+                <!--Javascript-->
+                <form onsubmit="writealert()">
+                    <label for="förnamn">Förnamn</label>
+                    <input type="text" id="förnamn" name="förnamn" placeholder="Alex" />
+
+                    <label for="efternamn">Efternamn</label>
+                    <input type="text" id="efternamn" name="efternamn" placeholder="Hadi" />
+
+                    <label for="Mejl">Mejl Adress</label>
+                    <input type="text" id="Mejl" name="Mejl" placeholder="Alex.Hadi@outlook.com" />
+
+                    <label for="sub">Medelande</label>
+                    <textarea id="sub" name="sub" placeholder="Ditt Medelande..."
+                        style="height: 100px; resize: none"></textarea>
+                    <input type="submit" value="Skicka" />
+                </form>
+            </div>
+
+            <!--bilderna-->
+            <div class="right-content">
+                <div class="rightContent img"></div>
+                <img src="imgrest/resturang.jpg" alt="restaurant_1" />
+                <img src="imgrest/resturang2.jpg" alt="restaurant_2" />
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li><a href="omoss.html">Kontakta Oss</a></li>
+            <li><a href="Aktiviteter.html">Boka Aktiviteter</a></li>
+        </ul>
+        <p class="smallFont center">&copy;2021 Great Northern Restaurant</p>
+    </div>
+</body>
+
+</html>

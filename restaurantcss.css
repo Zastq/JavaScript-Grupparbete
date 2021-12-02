@@ -1,0 +1,694 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("imgrest/pexels-monicore-141876.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-attachment: fixed;
+
+}
+
+
+#logoh1 {
+    padding-top: 1em;
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    /* Sets the logo to a lighter font */
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    /*Hides the Scrollbars */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+html ::-webkit-scrollbar {
+    /* For Chrome */
+    display: none;
+}
+
+.topnav {
+    background-color: rgba(25, 20, 16, 0.95);
+    border-bottom: 6px solid black;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: #FFEFF6;
+}
+
+.languageImg {
+    position: fixed;
+    right: 2%;
+    top: 2%;
+}
+
+.languageImg img {
+    height: 30px;
+    width: 48px;
+    border-radius: 10%;
+}
+
+a:link,
+a:visited {
+    color: #FFEFF6;
+    text-decoration: none;
+}
+
+#centerList {
+    margin: 0 auto;
+    font-size: 1.3em;
+}
+
+#horizontal-list {
+    list-style: none;
+    padding-top: 10px;
+
+}
+
+#horizontal-list li {
+    display: inline;
+    margin: 3em;
+}
+
+.footer {
+    min-height: 2em;
+    background-color: rgba(25, 20, 16, 0.95);
+    border-top: 6px solid black;
+    color: #FFEFF6;
+    height: fit-content;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer li {
+    list-style: none;
+    display: inline;
+    padding-left: 30%;
+}
+
+
+.content {
+    background-color: #f7d9c6cb;
+    padding: 2em;
+    overflow-x: hidden;
+    height: 100%;
+    min-height: 50em;
+    width: 50%;
+    margin: 10em auto 1em auto;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.content img {
+    border-radius: 20px 40px;
+    /*Makes all or imgs the same, with the same border radius in content box. */
+    height: auto;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.smallFont {
+    font-size: 12px;
+}
+
+
+
+/* -------------------Index Page Grid------------------- */
+
+#indexGrid {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    grid-template-areas:
+        "item1 item1 img1"
+        "menu1 img2 open1"
+        "menu1 img3 open1";
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1.5fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+}
+
+.indexItem1 {
+    grid-area: item1;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 2rem;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+
+    /*Move items to the middle, both Vertically and Horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexItem2 {
+    grid-area: img1;
+    margin: auto;
+}
+
+.indexItem3 {
+    grid-area: menu1;
+    background-color: rgb(253, 236, 215);
+    padding: 0.5rem;
+    border-radius: 4em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indexItem4 {
+    grid-area: img2;
+    margin: auto;
+}
+
+.indexItem5 {
+    grid-area: img3;
+    margin: auto;
+    border-radius: 20px 40px;
+}
+
+.indexItem6 {
+    grid-area: open1;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    align-items: center;
+    text-align: center;
+    padding: 3em 1rem 1rem;
+}
+
+
+.indexItem6 h3 {
+    margin: 0;
+    padding: 0.4rem;
+}
+
+.indexItem6 td {
+    padding: 0.8rem;
+}
+
+.indexCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 600px) {
+
+    /*Changed the layout when the screen is 600px or less */
+    #indexGrid {
+        grid-template-areas:
+            "menu1"
+            "menu1"
+            "open1"
+            "open1";
+        max-width: 600px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .indexItem1,
+    .indexItem2,
+    .indexItem4,
+    .indexItem5 {
+        /*Hiddes the gird areas not needed, img and welcome text */
+        display: none;
+    }
+
+    /*Changed the menu to be listed vertical instead, and removed the padding to center it */
+    #horizontal-list {
+        padding: 0;
+    }
+
+    #horizontal-list li {
+        display: list-item;
+        margin: 0.5rem;
+    }
+
+    .content {
+        /*Pushes down the content so it appears under the menu */
+        margin-top: 45%;
+    }
+
+    .footer li {
+        /*Fixes the footer padding so its more centerted*/
+        padding-left: 20%;
+    }
+
+    .footer ul {
+        /*Centers the list*/
+        padding: 0;
+    }
+
+    .languageImg {
+        display: grid;
+    }
+
+    .languageImg img {
+        padding-bottom: 1rem;
+    }
+}
+
+
+/* ------------------- Menu and Booking Grid ------------------- */
+
+#menuGrid {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    grid-template-areas:
+        " . item1 item1 . "
+        "bokabord bokabord menu1 menu1"
+        "menu2 menu2 menu1 menu1"
+        ". . menu1 menu1";
+    grid-template-columns: 1fr 0.63fr 0.63fr 1fr;
+    /* 0.63 fr so it get somewhat the same size compared to the others */
+    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+}
+
+.menuItemHead {
+    grid-area: item1;
+    background-color: rgb(253, 236, 215);
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.menuItem1 {
+    grid-area: menu1;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 1.8rem;
+    text-align: left;
+
+}
+
+.menuItem2 {
+    grid-area: bokabord;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 1.8rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.menuItem2 form {
+    text-align: center;
+}
+
+.menuItem2 a:link {
+    color: rgb(78, 44, 44);
+    text-decoration: underline;
+}
+
+.menuItem3 {
+    grid-area: menu2;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 1.8rem;
+    text-align: left;
+}
+
+.menuItemAlign {
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #menuGrid {
+        display: grid;
+        width: 100%;
+        height: fit-content;
+        grid-template-areas:
+            "item1"
+            "bokabord"
+            "menu1"
+            "menu2";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.3fr 1.5fr 0.7fr;
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+    }
+
+    .menuItem1 {
+        font-size: 2.4vw;
+    }
+}
+
+/* ------------------- Activities Grid ------------------- */
+
+#activitiesGrid {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    grid-template-areas:
+        ". AHead ."
+        "Aitem1 Aitem1 Aimg1"
+        "Aitem2 Aitem2 Aimg2"
+        "Aitem3 Aitem3 Aimg3"
+        "Aitem4 Aitem4 Aimg4"
+        "Aitem5 Aitem5 Aitem5";
+    grid-template-columns: 1fr 1.3fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+}
+
+/*RUBRIK*/
+.activitiesItemHead {
+    grid-area: AHead;
+    background-color: rgb(253, 236, 215);
+    text-align: center;
+    border-radius: 2rem;
+}
+
+/*VINPROVNING*/
+.activitiesItem1 {
+    grid-area: Aitem1;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.activitiesItem2 {
+    grid-area: Aimg1;
+    margin: auto;
+}
+
+/*YOGADAG*/
+.activitiesItem3 {
+    grid-area: Aitem2;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.activitiesItem4 {
+    grid-area: Aimg2;
+    margin: auto;
+}
+
+/*JULBORD*/
+.activitiesItem5 {
+    grid-area: Aitem3;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.activitiesItem6 {
+    grid-area: Aimg3;
+    margin: auto;
+}
+
+/*FEST*/
+.activitiesItem7 {
+    grid-area: Aitem4;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.activitiesItem8 {
+    grid-area: Aimg4;
+    margin: auto;
+}
+
+/*FORMULÄR*/
+.activitiesItem9 {
+    grid-area: Aitem5;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4em;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+    /*Changed the layout when the screen is 600px or less */
+    #activitiesGrid {
+        display: grid;
+        width: 100%;
+        height: fit-content;
+        grid-template-areas:
+            "AHead"
+            "Aitem1"
+            "Aimg1"
+            "Aitem2"
+            "Aimg2"
+            "Aitem3"
+            "Aimg3"
+            "Aitem4"
+            "Aimg4"
+            "Aitem5";
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ------------------- Calendar Grid ------------------- */
+
+
+#calendarGrid {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    grid-template-areas:
+        ". item1 ."
+        "calandar calandar activityFlow"
+        "img1 img1 activityFlow";
+    grid-template-columns: 1fr 1.3fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.5fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+}
+
+.calendarItem1 {
+    grid-area: item1;
+    background-color: rgb(253, 236, 215);
+    text-align: center;
+    border-radius: 4rem;
+}
+
+.calendarItem2 {
+    grid-area: calandar;
+    box-sizing: border-box;
+    background-color: rgb(253, 236, 215);
+    border-radius: 4rem;
+}
+
+.calendarItem3 {
+    grid-area: activityFlow;
+    background-color: rgb(253, 236, 215);
+    text-align: center;
+    border-radius: 4rem;
+}
+
+.calendarItem4 {
+    grid-area: img1;
+}
+
+.calendarItem4 img {
+    width: 49%;
+    height: auto;
+}
+
+
+
+.month {
+    box-sizing: border-box;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    padding: 1rem;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    border-bottom: 2px solid black;
+
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.days>div:hover {
+    background-color: rgb(241, 211, 175);
+    cursor: pointer;
+}
+
+.days div {
+    margin: 0.5rem 0.3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-date,
+.next-date {
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 600px) {
+
+    /*Changed the layout when the screen is 600px or less */
+    #calendarGrid {
+        grid-template-areas:
+            "item1"
+            "calandar"
+            "activityFlow";
+        max-width: 600px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 1.5fr;
+    }
+
+    .calendarItem4 {
+        display: none;
+    }
+
+}
+
+/* ------------------- About Us Grid -------------------*/
+
+#aboutUsGrid {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    grid-template-areas:
+        " . title1 ."
+        "item1 item2 item3"
+        "item1 item2 item3"
+        ". item2 item3";
+    grid-template-columns: 1fr 1.3fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+}
+
+.title {
+    grid-area: title1;
+    background-color: rgb(253, 236, 215);
+    border-radius: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.left-content {
+    grid-area: item1;
+    background-color: rgb(253, 236, 215);
+    padding: 00.5rem;
+    border-radius: 2rem;
+}
+
+.left-content h3 {
+    text-align: center;
+}
+
+
+.middle-content {
+    grid-area: item2;
+}
+
+.middle-content h3 {
+    text-align: center;
+}
+
+.right-content {
+    grid-area: item3;
+
+}
+
+.right-content img {
+    margin-bottom: 3rem;
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+.middle-content input[type=text],
+.middle-content .select,
+.middle-content textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#socialImg img {
+    width: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    #aboutUsGrid {
+        grid-template-areas:
+            " title1"
+            "item2 "
+            "item1 ";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr;
+    }
+
+    .right-content {
+        display: none;
+    }
+
+    .title {
+        /*Makes the swedish title on the same row */
+        font-size: 2.4vw;
+    }
+
+    .middle-content {
+        text-align: center;
+    }
+}

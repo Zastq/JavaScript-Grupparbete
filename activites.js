@@ -1,57 +1,48 @@
-const fs = require("fs");
-const express = require("express");
-const path = require("path");
+document.addEventListener("DOMContentLoaded", main);
 
-const app = express();
-const port = 3000;
 
-app.use(express.urlencoded({
-    extended: true
-}));
+function main(){
 
-app.use(express.json());
-app.use(express.static(path.join(__dirname,)))
-
-app.get("/Aktiviteter.html/activitySubmited", function(request, response){
-    fs.readFile( "./myfile.json", "utf8", (error, result)=>{
-     if (error) {
-         console.log(error);
-         return;
-     }
-     const clientJson = JSON.parse(result);
-     response.json(clientJson).end();
-    }) 
- });
-
- function replacer(key, value){
-    if (typeof value === "string"){
-
-        return value.replaceAll("<","&lt;").replaceAll(">", "&gt;")
-    }
-    return value;
 }
 
-app.post('/Aktiviteter.html/activitySubmited', function (request, response) {
-    fs.readFile( "./myfile.json", "utf8", (error, result)=>{
-        if (error) {
-            console.log(error);
-            return;
-        }
-        let newComment = request.body;
+function activitesSubmit(event){
+    //console.log(event.target);
 
-        const clientJson = JSON.parse(result);
-        clientJson.push(newComment) // array.
+    const inputName = document.getElementById("username")
+    const inputEmail = document.getElementById("email")
+    const inputAlt = document.getElementById("alternativ") // Unsure if needed.
+    const inputComment = document.getElementById("bookingcomment")
+    const errorMessage = document.getElementById("errorMessage");
 
-        fs.writeFile("./myfile.json", JSON.stringify(clientJson, replacer, 2),(error, result) =>{ // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter
-            if (error) {
-                console.log(error);
-                return;
-            }
-            response.json({}).end();
-        })
-    });
-});
+    let messages = [];
 
-app.listen(port, () => {
-    console.log(`Server running at localhost: ${port}`);
-    });
+    if (inputName.value === '' || inputName.value == null) {
+        messages.push("Name cannot be empty")
+    } 
+
+
+    if (inputEmail.value === '' || inputEmail.value == null) {
+        messages.push("Email cannot be empty")
+    } else if (!inputEmail.value.match(/^\S+@\S+/)) 
+    {
+        messages.push("Incorrect email input.")
+    }
+
+
+    if (inputComment.value === '' || inputComment.value == null) {
+        messages.push("Comment cannot be empty")
+    } 
+
+
+    if (messages.length == 0) {
+        messages.push("Sucess!")
+
+        const data = new FormData(event.target);
+        fetch("/Aktiviteter.html/activitySubmited", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(Object.fromEntries(data))})
+    }
+
+    errorMessage.innerText = messages.join(", \n");
+
+    event.preventDefault();
+
+}

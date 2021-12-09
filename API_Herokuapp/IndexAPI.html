@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Herokuapp </title>
+    <script src="./Client.js"></script>
+    <link rel="stylesheet" href="API.css">
+</head>
+<body>  
+    
+    <h1>Filmer - Studio GHIBLI</h1>
+
+    <template id="movieCard">
+        <div class="card"> <!-- Note i Clint JS, array börjar på 1.-->
+            <h2 class="movieTitle">Movie Title</h2>
+            <h3>Movie Title Rom</h3>
+            <p>Disc</p>
+            <p>Score: </p>
+            <button>More Info</button>
+            <img class="movieImage">
+            <hr>
+        </div>
+    </template>
+
+    <template id="moreInfoCard">
+        <div class="card"> 
+            <h2 class="movieTitle">Movie Title</h2>
+            <h3>Movie Title Rom</h3>
+            <p>Disc</p>
+            <p>Score: </p>
+            <p>Director: </p>
+            <p>Producer: </p>
+            <p>Release Date: </p>
+            <p>Running Time: </p>
+            <button>Hide</button>
+            <img class="movieImage">
+            <hr>
+        </div>
+    </template>
+
+    <div id="movieDiv">
+
+    </div>
+    <div id="moreInfo">
+
+    </div>
+
+</body>
+</html>

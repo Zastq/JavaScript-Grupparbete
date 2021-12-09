@@ -1,0 +1,16 @@
+h1{
+  text-align: center;  
+}
+
+#movieDiv{
+    width: 35%;
+}
+
+.movieImage{
+    width: 100%;
+}
+
+.card{
+    background-color: cornsilk;
+    padding: 1rem;
+}

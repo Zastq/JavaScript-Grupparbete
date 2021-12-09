@@ -17,20 +17,20 @@ async function main(){
 
         let movieDiv = document.getElementById("movieDiv");
 
-        let titleElement = document.createElement("p")
-        titleElement.innerHTML = title;
+        // let titleElement = document.createElement("p")
+        // titleElement.innerHTML = title;
         
-        let titleRomanisedElement = document.createElement("p")
-        titleRomanisedElement.innerHTML = original_title_romanised;
+        // let titleRomanisedElement = document.createElement("p")
+        // titleRomanisedElement.innerHTML = original_title_romanised;
 
-        let descriptionElement = document.createElement("p")
-        descriptionElement.innerHTML = description;
+        // let descriptionElement = document.createElement("p")
+        // descriptionElement.innerHTML = description;
 
-        let rtScoreElement = document.createElement("p")
-        rtScoreElement.innerHTML = rt_score;
+        // let rtScoreElement = document.createElement("p")
+        // rtScoreElement.innerHTML = rt_score;
 
-        let imageElement = document.createElement("img")
-        imageElement.src = image;
+        // let imageElement = document.createElement("img")
+        // imageElement.src = image;
 
 
 

@@ -5,7 +5,7 @@ JavaScript Kurs - Grupparbete - Serverfunktionalitet &amp; API
 
 - [X]  Utöka en webbsida som ni jobbat med i tidigare kurs genom att lägga till serverfunktionalitettill ett formulär (kontaktformulär eller bokningsformulär - om ni inte redan har något sådant på webbsidan som ni byggde så får ni lägga till detta).
 - [X] Inmatningar ska sparas i JSON-format till en textfil på servern när användaren skickar formuläret.
-- [ ] Vidare ska ni skapa en ”administratörswebbsida” där användaren måste ange ett lösenord i ett formulär. Om lösenordet är korrekt (kontrollera med en if-sats på serversidan) så ska data från textfilen visas på något lättläst sätt (använd t.ex. JSON.parse och skriv ut som en tabell eller liknande).
+- [X] Vidare ska ni skapa en ”administratörswebbsida” där användaren måste ange ett lösenord i ett formulär. Om lösenordet är korrekt (kontrollera med en if-sats på serversidan) så ska data från textfilen visas på något lättläst sätt (använd t.ex. JSON.parse och skriv ut som en tabell eller liknande).
 
 ### Del 2: Hämta data från API
 - [ ] Gör en applikation där användaren hämtar data från Ghibli-API:et https://ghibliapi.herokuapp.com/. 

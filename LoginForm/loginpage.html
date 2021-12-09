@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+
+<body>
+    <div id="loginFormDiv">
+        <form id="loginForm" onsubmit="sumbitLogin(event)" >
+            <label for="loginUserName">Användarnamn:</label>
+            <br>
+            <input type="text" id="loginUserName" name="loginUserName">
+            <br>
+            <label for="loginPassword">Lösenord</label>
+            <br>
+            <input type="password" id="loginPassword" name="loginPassword">
+            <br>
+            <br>
+            <input type="submit" value="Visa Bokningar">
+            <br>
+            <br>
+            <div id="errorMessage"></div>
+        </form>
+    </div>
+    <div id="bokningInfo">
+        <h4>Bookings</h4>
+        <hr>
+    </div>
+</body>
+
+</html>

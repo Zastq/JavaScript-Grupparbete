@@ -1,0 +1,24 @@
+#loginFormDiv{
+    background-color: bisque;
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    margin-top: 5rem;
+    height: 5%;
+    padding: 5rem;
+    border-radius: 2rem;
+}
+
+#bokningInfo{
+    padding: 2rem;
+    width: 15%;
+    background-color: burlywood;
+    margin: auto;
+    margin-top:1rem;
+    border-radius: 2rem;
+}
+
+#bokningInfo h4{
+    text-align: center;
+}
+

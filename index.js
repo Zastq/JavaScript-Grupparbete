@@ -1,6 +1,7 @@
 const fs = require("fs");
 const express = require("express");
 const path = require("path");
+const { response } = require("express");
 
 const app = express();
 const port = 3000;
@@ -11,6 +12,7 @@ app.use(express.urlencoded({
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname,)))
+app.use(express.static(path.join("LoginForm")))
 
 app.get("/Aktiviteter.html/activitySubmited", function(request, response){
     fs.readFile( "./myfile.json", "utf8", (error, result)=>{
@@ -52,6 +54,22 @@ app.post('/Aktiviteter.html/activitySubmited', function (request, response) {
     });
 });
 
+
+
+// Login Info - Booking Sumbit.
+
+fs.readFile( "./myfile.json", "utf8", (error, result) =>{
+    if(error){
+        console.log(error);
+        return
+    }
+});
+var textfile = fs.readFileSync("myfile.json", "utf8")
+console.log(textfile);
+
+
+
+// Port
 app.listen(port, () => {
     console.log(`Server running at localhost: ${port}`);
     });

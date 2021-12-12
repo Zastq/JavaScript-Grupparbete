@@ -6,26 +6,32 @@ function main(){
 }
 
 function menuBooking(event){
-    const bookingName = document.getElementById("Namn")
-    const bookingEmail = document.getElementById("E-post")
-    const bookingOther = document.getElementById("Other")
+    const bookingförnamn = document.getElementById("förnamn")
+    const bookingefternamn = document.getElementById("efternamn")
+    const bookingMejlAdress = document.getElementById("Mejl Adress")
+    const bookingsub = document.getElementById("sub")
     event.preventDefault();
 
 
-    if (bookingName.value === '' || bookingName.value == null){
-        alert("You must enter a name")
+
+    if (bookingförnamn.value === '' || bookingförnamn.value == null){
+        alert("fyll i namn")
     }
 
-    if (bookingEmail.value === '' || bookingEmail.value == null){
-        alert("You must enter an Email")
+    if (bookingefternamn.value === '' || bookinglastname.value == null){
+        alert("Fyll i efternamn")
+    }
+
+    if (bookingMejlAdress.value === '' || bookingMejlAdress.value == null){
+        alert("fyll i Mejl adress")
     } 
-    else if (!bookingEmail.value.match(/^\S+@\S+/)){
-        alert("An error occurred. Please enter a valid email format")
+    else if (!bookingMejlAdress.value.match(/^\S+@\S+/)){
+        alert("!Error!, skriv rätt format")
     }
 
-    if (bookingOther.value === '' || bookingOther.value == null){
-        alert("Please specify number of guests, time, date and any allergies. Your request will not be handeled otherwise")
+    if (bookingsub.value === '' || bookingsub.value == null){
+        alert("Skriv ditt meddelande ")
     }
 const data = new FormData(event.target)
-fetch("menu.html/bookingSubmited", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(Object.fromEntries(data))})
+fetch("omoss.html/bookingSubmited", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(Object.fromEntries(data))})
 }
